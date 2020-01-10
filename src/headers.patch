@@ -1,0 +1,52 @@
+--- bezctx.h~	2007-10-29 13:33:45.000000000 -0800
++++ bezctx.h	2007-10-29 13:33:45.000000000 -0800
+@@ -1,3 +1,5 @@
++#ifndef _BEZCTX_H
++#define _BEZCTX_H
+ #include "bezctx_intf.h"
+ 
+ struct _bezctx {
+@@ -8,3 +10,4 @@
+ 		    double x3, double y3);
+     void (*mark_knot)(bezctx *bc, int knot_idx);
+ };
++#endif
+--- bezctx_intf.h~	2007-10-29 13:33:45.000000000 -0800
++++ bezctx_intf.h	2007-10-29 13:33:45.000000000 -0800
+@@ -1,3 +1,5 @@
++#ifndef _BEZCTX_INTF_H
++#define _BEZCTX_INTF_H
+ typedef struct _bezctx bezctx;
+ 
+ bezctx *
+@@ -18,3 +20,4 @@
+ 
+ void
+ bezctx_mark_knot(bezctx *bc, int knot_idx);
++#endif
+--- spiro.h~	2007-10-29 13:33:45.000000000 -0800
++++ spiro.h	2007-10-29 13:33:45.000000000 -0800
+@@ -1,3 +1,5 @@
++#ifndef _SPIRO_H
++#define _SPIRO_H
+ typedef struct {
+     double x;
+     double y;
+@@ -16,3 +18,4 @@
+ spiro_to_bpath(const spiro_seg *s, int n, bezctx *bc);
+ 
+ double get_knot_th(const spiro_seg *s, int i);
++#endif
+--- zmisc.h~	2007-10-29 13:33:45.000000000 -0800
++++ zmisc.h	2007-10-29 13:33:45.000000000 -0800
+@@ -1,3 +1,5 @@
++#ifndef _ZMISC_H
++# define _ZMISC_H
+ /**
+  * Misc portability and convenience macros.
+  **/
+@@ -10,3 +12,4 @@
+ 
+ #define znew(type, n) (type *)zalloc(sizeof(type) * (n))
+ #define zrenew(type, p, n) (type *)zrealloc((p), sizeof(type) * (n))
++#endif
