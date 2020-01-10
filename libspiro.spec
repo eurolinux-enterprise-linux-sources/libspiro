@@ -1,6 +1,6 @@
 Name:           libspiro
 Version:        20071029
-Release:        10%{?dist}
+Release:        12%{?dist}
 Summary:        Library to simplify the drawing of beautiful curves
 
 Group:          System Environment/Libraries
@@ -51,6 +51,12 @@ find $RPM_BUILD_ROOT -name '*.la' -exec rm -f {} ';'
 %{_libdir}/*.so
 
 %changelog
+* Fri Jan 24 2014 Daniel Mach <dmach@redhat.com> - 20071029-12
+- Mass rebuild 2014-01-24
+
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 20071029-11
+- Mass rebuild 2013-12-27
+
 * Sat Mar 23 2013 Kevin Fenzi <kevin@scrye.com> 20071029-10
 - Add patch to add aarch64 support. Fixes bug #925890
 
